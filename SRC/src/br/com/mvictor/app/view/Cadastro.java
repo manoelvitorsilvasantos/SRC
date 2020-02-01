@@ -31,7 +31,7 @@ public class Cadastro extends javax.swing.JFrame {
      */
     public Cadastro() {
         initComponents();
-        //this.setExtendedState(Cadastro.MAXIMIZED_BOTH);
+        this.setExtendedState(Cadastro.MAXIMIZED_BOTH);
         this.txtBairro.setBorder(new LineBorder(Color.BLACK));
         this.txtCelS.setBorder(new LineBorder(Color.BLACK));
         this.txtCep.setBorder(new LineBorder(Color.BLACK));
@@ -473,6 +473,12 @@ public class Cadastro extends javax.swing.JFrame {
             try{
                 dao.inserir(cl);
                 JOptionPane.showMessageDialog(this, "O cadastro foi realizado com sucesso...", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                Thread.sleep(500);
+                TelaPrincipal home = new TelaPrincipal();
+                home.setVisible(true);
+                this.setVisible(false);
+                this.setDefaultCloseOperation(Cadastro.EXIT_ON_CLOSE);
+                this.dispose();
             }
             catch(Exception ex)
             {

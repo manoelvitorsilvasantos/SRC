@@ -24,7 +24,7 @@ public class Lista extends javax.swing.JFrame {
      */
     public Lista() {
         initComponents();
-        //this.setExtendedState(Lista.MAXIMIZED_BOTH);
+        this.setExtendedState(Lista.MAXIMIZED_BOTH);
         this.tabela.setModel(modelo);
         
         try

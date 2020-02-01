@@ -20,7 +20,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
-        //this.setExtendedState(TelaPrincipal.MAXIMIZED_BOTH);
+        //maxima a tela ao máximo, de acordo com a resolução da tela.
+        this.setExtendedState(TelaPrincipal.MAXIMIZED_BOTH);
     }
 
     /**
